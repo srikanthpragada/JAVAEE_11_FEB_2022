@@ -11,8 +11,10 @@ public class UpdateSalary {
 				  ("jdbc:mysql://localhost:3306/hr", "root", "mysql");
 		PreparedStatement ps = con.prepareStatement
 				    ("update employees set salary = ? where id = ?");
+		
 		ps.setInt(1, 550000); // salary 
 		ps.setInt(2, 11);  // id
+	 
 		
 		int count = ps.executeUpdate();
 		System.out.printf("Updated %d row(s)", count);

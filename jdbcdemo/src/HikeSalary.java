@@ -9,11 +9,10 @@ public class HikeSalary {
 	public static void main(String[] args) throws Exception {
 		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/hr", "root", "mysql");
 		Statement st = con.createStatement();
-
-		int count = st.executeUpdate("update employees set salary = salary + 50000 where id = 5");
-		System.out.printf("Updated %d row(s)", count);
+        System.out.println(st.getClass());
+//		int count = st.executeUpdate("update employees set salary = salary + 50000 where id = 10");
+//		System.out.printf("Updated %d row(s)", count);
 		st.close();
 		con.close();
 	}
-
 }
